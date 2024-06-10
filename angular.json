@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "login": {
+    "angular_17_login": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/login",
+            "outputPath": "dist/angular_17_login",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "login:build:production"
+              "buildTarget": "angular_17_login:build:production"
             },
             "development": {
-              "buildTarget": "login:build:development"
+              "buildTarget": "angular_17_login:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "login:build"
+            "buildTarget": "angular_17_login:build"
           }
         },
         "test": {
@@ -91,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "03b8ea23-b062-4287-8722-81797418d670"
   }
 }
